@@ -20,7 +20,7 @@ function selectionSort(array){
 		}
 		if (minIndex !== j) {
 			var minValue = array.splice(minIndex,1);
-			array.splice(j, 0, minValue[0]);
+			array.splice(j, 0, minValue[0]);			//slot into xth-smallest position
 			/*var x = array[j];
 			array[j] = array[minIndex];
 			array[minIndex] = x;

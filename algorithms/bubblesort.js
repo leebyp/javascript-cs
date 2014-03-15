@@ -12,15 +12,15 @@ O(n^2)
 var bubbleSort = function(array){
 	for (var j=0; j<array.length; j++){
 		var checkArray = array.slice(0);
-		for (var i=0; i<array.length-j; i++){
+		for (var i=0; i<array.length-j; i++){		//only need to go to unsorted limit
 			if (array[i]>array[i+1]){
-				var x = array[i];
+				var x = array[i];					//swap
 				array[i] = array[i+1];
 				array[i+1] = x;
 			}
 		}
 		if (checkArray === array){
-			return array;
+			return array;							//early terminate if array same after run
 		}
 	}
 	return array;

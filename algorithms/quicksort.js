@@ -42,7 +42,7 @@ function swap(array, index1, index2){
 	array[index2] = x;
 }
 
-function partition(array, leftindex, rightindex){
+function partition(array, leftindex, rightindex){		//partition array into left and right, returning index of intersect
 	var pivot = array[Math.floor((rightindex+leftindex)/2)];
 	var i = leftindex;
 	var j = rightindex;
@@ -64,17 +64,17 @@ function partition(array, leftindex, rightindex){
 
 function quickSort(array, leftindex, rightindex){
 	
-	if (array.length <= 1){
+	if (array.length <= 1){								//stops recursion
 		return array;
 	}
 
 	index = partition(array, leftindex, rightindex);
 
-	if (leftindex < index-1){
+	if (leftindex < index-1){							//ensure left and right indices make sense before sorting
 		quickSort(array, leftindex, index-1);
 	}
-	if (index < rightindex){
-		quickSort(array, index, rightindex);
+	if (index < rightindex){						
+		quickSort(array, index, rightindex);			
 	}
 
 	return array;

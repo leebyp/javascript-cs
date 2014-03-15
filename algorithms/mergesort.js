@@ -12,7 +12,7 @@ O(nlogn)
 
 function replaceMergeSort(arr){
 
-	function merge(leftarray, rightarray) {
+	function merge(leftarray, rightarray) {								//merge left and right arrays
 		var result = [];
 		while(leftarray.length && rightarray.length) {
 			if (leftarray[0] <= rightarray[0]) {
@@ -38,7 +38,7 @@ function replaceMergeSort(arr){
 		var leftarray = array.slice(0, middle);
 		var rightarray = array.slice(middle);
 
-		return merge(mergeSort(leftarray), mergeSort(rightarray));
+		return merge(mergeSort(leftarray), mergeSort(rightarray));	//merge each halfarray, splitting until one element
 	}
 
 	arr = mergeSort(arr);
